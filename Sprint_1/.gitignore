@@ -45,3 +45,8 @@ Thumbs.db
 package-lock.json
 
 
+# System files
+.DS_Store
+Thumbs.db
+
+.vscode/
