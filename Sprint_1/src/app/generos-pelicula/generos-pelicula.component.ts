@@ -1,32 +1,37 @@
+// src/app/generos-pelicula/generos-pelicula.component.ts
 import { Component, OnInit, ViewChild, ElementRef, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import { PLATFORM_ID } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule, isPlatformBrowser }                      from '@angular/common';
+import { RouterModule, Router }                                 from '@angular/router';
+import { PLATFORM_ID }                                          from '@angular/core';
 
 declare let bootstrap: any;
 
 @Component({
   selector: 'app-generos-pelicula',
-  imports: [],
+  standalone: true,                       // marca como standalone
+  imports: [ CommonModule, RouterModule ],// importa CommonModule y RouterModule
   templateUrl: './generos-pelicula.component.html',
-  styleUrl: './generos-pelicula.component.scss'
+  styleUrls: ['./generos-pelicula.component.scss']
 })
 export class GenerosPeliculaComponent implements OnInit {
-  
-  @ViewChild('miGenero', { static: true }) dropdownButton!: ElementRef; // Selecciona el botón
+  @ViewChild('miGenero', { static: true })
+  dropdownButton!: ElementRef;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: object, private router: Router) {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
+    private router: Router
+  ) {}
 
-  verGenero(archivo: string){
-    this.router.navigate(['/listapeliculas', archivo]);
-  }
-
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      if (this.dropdownButton) {
-        new bootstrap.Dropdown(this.dropdownButton.nativeElement); // Inicializa Bootstrap correctamente
-      }
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId) && this.dropdownButton) {
+      new bootstrap.Dropdown(this.dropdownButton.nativeElement);
     }
   }
+
+  verGenero(genero: string): void {
+    // Navega a /listapeliculas/:genero
+    this.router.navigate(['/listapeliculas', genero]);
+  }
 }
+
 

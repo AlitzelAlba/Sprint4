@@ -1,0 +1,13 @@
+{
+    "data":
+    [
+        {"nombre": "ThunderCats", 
+        "descripcion": "Los felinos cósmicos sigue las aventuras del equipo de héroes los ThunderCats, que es un grupo de felinos humanoides extraterrestres, muy avanzados tecnológicamente pero apegados a estilos y costumbres propios de un típico relato de espadachines y hechicería, llegando a vivir en un planeta azul que ellos llamaron Tercer Planeta. La trama de la serie inicia en Thundera un planeta a punto de explotar, lo que obliga a los ThunderCats, la casta más alta de nobles thunderianos, a huir de su planeta natal, en donde vivían en paz y sin necesidad del uso de ropa ni de armas especiales, en una flota de naves espaciales.",
+        "imagen": "imagenes/Thundercats.jpg"
+        },
+        {"nombre": "HeMan", 
+        "descripcion": "En el lejano planeta de Eternia, un reino mágico y tecnológico, el joven Príncipe Adam guarda un poderoso secreto. Cuando levanta su espada mágica y dice las palabras: “¡Por el poder de Grayskull… yo tengo el poder!”, se transforma en He-Man, el hombre más poderoso del universo. Junto a sus aliados —como Man-At-Arms, Teela, Orko y La Hechicera— He-Man protege el Castillo Grayskull, una fuente de poderes místicos, de las constantes amenazas del malvado Skeletor, quien busca dominar Eternia y obtener el poder absoluto.",
+        "imagen": "imagenes/HeMan.jpg"
+        }
+    ]
+}

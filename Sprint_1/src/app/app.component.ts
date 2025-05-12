@@ -1,18 +1,15 @@
-import { Component } from '@angular/core';
+// src/app/app.component.ts
+import { Component }   from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ListaPeliculasComponentComponent } from './lista-peliculas-component/lista-peliculas-component.component';
-import { GenerosPeliculaComponent } from './generos-pelicula/generos-pelicula.component';
-import { SearchPeliculaComponent } from './search-pelicula/search-pelicula.component';
-
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ListaPeliculasComponentComponent, GenerosPeliculaComponent, SearchPeliculaComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  standalone: true,             // marca como standalone
+  imports: [ RouterOutlet ],     // solo importe RouterOutlet
+  template: `<router-outlet></router-outlet>`,  // punto de montaje de las rutas
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Sprint_1';
-
-  
 }
+

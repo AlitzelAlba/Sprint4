@@ -1,15 +1,17 @@
+// src/app/services/tmdb.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class TmdbService {
+  private jsonUrl = '/assets/1_comedia.json';
+
   constructor(private http: HttpClient) {}
 
-  getPeliculas(archivo: string): Observable<any> {
-    return this.http.get<any>(`assets/${archivo}`);
+  getTodasLasPeliculas(): Observable<{ [key: string]: any[] }> {
+    return this.http.get<{ [key: string]: any[] }>(this.jsonUrl);
   }
 }
+
 

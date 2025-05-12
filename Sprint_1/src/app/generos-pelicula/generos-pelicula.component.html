@@ -1,31 +1,48 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
 <nav class="nav justify-content-center p-2">
+  <h3>Caricaturas clásicas</h3>
 
-    <!-- Menú desplegable para el género -->
-     <h3>Caricaturas clásicas</h3>
-    
+  <div class="dropdown">
+    <button
+      #miGenero
+      class="btn mx-1 dropdown-toggle"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false">
+      Género
+    </button>
 
-    <div class="dropdown">
-      <button class="btn mx-1 dropdown-toggle" type="button" id="miGenero" data-bs-toggle="dropdown" aria-expanded="false">Genero</button>
+    <ul class="dropdown-menu" aria-labelledby="miGenero">
+      <!-- En lugar de pasar el JSON completo, pásale solo la clave "comedia" o "heroes" -->
+      <li>
+        <a
+          class="dropdown-item"
+          [routerLink]="['/listapeliculas', 'comedia']">
+          Comedia
+        </a>
+      </li>
+      <li>
+        <a
+          class="dropdown-item"
+          [routerLink]="['/listapeliculas', 'heroes']">
+          Fantasía Heroica
+        </a>
+      </li>
+    </ul>
+  </div>
 
-      <ul class="dropdown-menu" aria-labelledby="miGenero">
-        <li><button class="dropdown-item" (click)="verGenero('1_comedia.json')">Comedia</button></li>
-        <li><button class="dropdown-item" (click)="verGenero('2_superHeroes.json')">Fantasía Heroica</button></li>
-      </ul>
-    </div>
-
-    <button class="btn mx-1" id="misFavoritos">Favoritos</button>
-    <button class="btn mx-1" id="Ayuda">Ayuda</button>
-  </nav>
-
+  <button class="btn mx-1" id="misFavoritos">Favoritos</button>
+  <button class="btn mx-1" id="Ayuda">Ayuda</button>
+</nav>
 
 <h1>¿Qué te gustaría ver hoy?</h1>
-    <div class="barra">
-        <input id="miInput" placeholder="Buscar...">
-        <button id="miBoton">Buscar</button>
-    </div>
+<div class="barra">
+  <input id="miInput" placeholder="Buscar..." />
+  <button id="miBoton">Buscar</button>
+</div>
 
-    <div class="barra">
-        <ul id="miLista">
-        </ul>
+<div class="barra">
+  <ul id="miLista"></ul>
+</div>
+
