@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("cartoonsBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a930f95436ffc96e332a535020925b196ddf9b54")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b4661c1b5464aa892e070b38df91394f12a53cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("cartoonsBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("cartoonsBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
